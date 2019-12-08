@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      
+        Folie - Documentation
+      
+    </title>
+
+    
+      <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/toolkit-minimal.css" rel="stylesheet">
+      <link href="assets/css/application-minimal.css" rel="stylesheet">
+    
+      <link href="assets/css/docs.css" rel="stylesheet">
+      <link href="assets/css/custom.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.navbar-nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+          }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+          });
+      });
+  </script>
+  </head>
+
+
+<body>
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top navbar-light bg-faded" >
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="main.html#general" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">General <span class="sr-only">(current)</span></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#wp_install">Wordpress Information</a>
+<a class="dropdown-item" href="main.html#requirements">Folie Requirements</a>
+<a class="dropdown-item" href="main.html#whats_included">What's included</a>
+<a class="dropdown-item" href="main.html#theme_support">Folie theme support</a>
+<a class="dropdown-item" href="main.html#extend_renew">Extending & Renewing support</a>
+<a class="dropdown-item" href="main.html#register_purchase">Register your purchase</a>
+<a class="dropdown-item" href="main.html#find_purchase_code">Find purchase code</a>
+<a class="dropdown-item" href="main.html#license">Licensing</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#installation" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Installation</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#wordpress-installation">Wordpress Installation</a>
+<a class="dropdown-item" href="main.html#ftp-installation">FTP Installation</a>
+<a class="dropdown-item" href="main.html#update-theme">Update theme</a>
+<a class="dropdown-item" href="main.html#update_info">Important update information</a>
+<a class="dropdown-item" href="main.html#install-demo">Install demo content</a>
+<a class="dropdown-item" href="main.html#child-theme">Installing child theme</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#theme-options" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Theme Options
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#general-options">General Options</a>
+<a class="dropdown-item" href="main.html#header">Header Options</a>
+<a class="dropdown-item" href="main.html#styling">Styling</a>
+<a class="dropdown-item" href="main.html#layout">Layout</a>
+<a class="dropdown-item" href="main.html#blog-options">Blog</a>
+<a class="dropdown-item" href="main.html#footer-options">Footer</a>
+<a class="dropdown-item" href="main.html#site-identity">Site Identity</a>
+<a class="dropdown-item" href="main.html#custom-types">Custom Types</a>
+<a class="dropdown-item" href="main.html#menus">Menus</a>
+<a class="dropdown-item" href="main.html#widgets">Widgets</a>
+<a class="dropdown-item" href="main.html#static-front-page">Static Front Page</a>
+<a class="dropdown-item" href="main.html#page-builder">Page Builder</a>
+<a class="dropdown-item" href="main.html#header-builder">Header Builder</a>
+<a class="dropdown-item" href="main.html#portfolio-items">Portfolio Items</a>
+<a class="dropdown-item" href="main.html#team">Team</a>
+<a class="dropdown-item" href="main.html#testimonials">Testimonials</a>
+<a class="dropdown-item" href="main.html#post-options">Posts</a>
+<a class="dropdown-item" href="main.html#pages">Pages</a>
+<a class="dropdown-item" href="main.html#image-sizes">Image Sizes</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#codeless_builder" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Codeless Builder
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#codeless_builder">What is Codeless Builder</a>
+<a class="dropdown-item" href="main.html#builder_start">How it works</a>
+<a class="dropdown-item dropdown-toggle" href="main.html#row_options">Rows & Row Options</a>
+<a class="dropdown-item" href="main.html#builder_columns">Column Options</a>
+<a class="dropdown-item" href="main.html#builder_elements">Elements</a>
+<a class="dropdown-item" href="main.html#builder_blocks">Content Blocks</a>
+<a class="dropdown-item" href="main.html#live_edit">Live edit anything</a>
+<a class="dropdown-item" href="main.html#builder_widgets">Live edit widgets</a>
+<a class="dropdown-item" href="main.html#builder_shortcuts">Draggable Spaces & Shortcuts</a>
+<a class="dropdown-item" href="main.html#builder_logo">Logo Builder</a>
+<a class="dropdown-item" href="main.html#builder_header">Header Builder</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#elements" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Elements
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width:430px;">
+<div class="row">
+<div class="col-6" style="width: 200px;">
+<a class="dropdown-item" href="main.html#row">Row</a>
+<a class="dropdown-item" href="main.html#page_header">Page Header</a>
+<a class="dropdown-item" href="main.html#text">Text</a>
+<a class="dropdown-item" href="main.html#custom_heading">Custom Heading</a>
+<a class="dropdown-item" href="main.html#buttons">Buttons</a>
+<a class="dropdown-item" href="main.html#media">Media</a>
+<a class="dropdown-item" href="main.html#gallery">Gallery</a>
+<a class="dropdown-item" href="main.html#divider">Divider</a>
+<a class="dropdown-item" href="main.html#services">Services</a>
+<a class="dropdown-item" href="main.html#testimonials">Testimonials</a>
+<a class="dropdown-item" href="main.html#team">Team</a>
+<a class="dropdown-item" href="main.html#portfolio_element">Portfolio</a>
+<a class="dropdown-item" href="main.html#codeless_slider">Codeless Slider</a>
+<a class="dropdown-item" href="main.html#blog_element">Blog</a>
+</div>
+<div class="col-6" style="width: 200px;">
+<a class="dropdown-item" href="main.html#clients">Clients</a>
+<a class="dropdown-item" href="main.html#empty_space">Empty Space</a>
+<a class="dropdown-item" href="main.html#counter">Counter</a>
+<a class="dropdown-item" href="main.html#progress_bar">Progress Bar</a>
+<a class="dropdown-item" href="main.html#google_map">Google Map</a>
+<a class="dropdown-item" href="main.html#contact_form">Contact Form 7</a>
+<a class="dropdown-item" href="main.html#toggles">Toggles</a>
+<a class="dropdown-item" href="main.html#list">List</a>
+<a class="dropdown-item" href="main.html#icon">Icon</a>
+<a class="dropdown-item" href="main.html#share_icons">Share Icons</a>
+<a class="dropdown-item" href="main.html#social_icons">Social Icons</a>
+<a class="dropdown-item" href="main.html#revolution_slider">Revolution Slider</a>
+<a class="dropdown-item" href="main.html#layer_slider">Layer Slider</a>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#blog" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Blog
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#basic-template">Blog Page Setup</a>
+<a class="dropdown-item" href="main.html#blog_wp">Wordpress Basic way</a>
+<a class="dropdown-item" href="main.html#blog_builder">Using Codeless Builder</a>
+<a class="dropdown-item" href="main.html#blog_options">Blog Options</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#portfolio" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Portfolio
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#portfolio-item">Portfolio Items</a>
+<a class="dropdown-item" href="main.html#portfolio-options">Portfolio Options</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#header-setup" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Header
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#header-setup">How to setup header</a>
+<a class="dropdown-item" href="main.html#header-options">Header Options</a>
+<a class="dropdown-item" href="main.html#megamenu">MegaMenu</a>
+<a class="dropdown-item" href="main.html#menu-options">Menu Options</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#footer" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Footer
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#footer_options">Footer Options</a>
+<a class="dropdown-item" href="main.html#footer-widgets">Footer Widgets</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#slider_start" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Sliders
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="main.html#add_slider">How to add a slider</a>
+<a class="dropdown-item" href="main.html#slider_dummy">Importing demo sliders</a>
+<a class="dropdown-item" href="main.html#codeless_sl_options">Codeless Slider</a>
+<a class="dropdown-item" href="main.html#rev_sl_options">Revolution Slider</a>
+<a class="dropdown-item" href="main.html#layer_sl_options">Layer Slider</a>
+<a class="dropdown-item" href="main.html#update_sliders">How to update premium sliders</a>
+<a class="dropdown-item" href="main.html#purchase_sliders">Purchase code for sliders</a>
+<a class="dropdown-item" href="main.html#other_sliders">Other Sliders</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="main.html#plugins" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Plugins
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="changelog.html">
+Changelog
+</a>
+</li>
+</ul>
+<form class="form-inline">
+<a class="btn btn-pill btn-primarys" href='https://themeforest.net/user/code-less/portfolio' target="_blank">Purchase Theme</a>
+</form>
+</div>
+</nav>
+    
+      <div class="docs-header" id="content">
+        <div class="container">
+          <h1>Documentation</h1>
+          <p>Welcome to Folie Documentation. Here you will find the all the useful detailed instructions to use Folie theme.</p>
+        </div>
+      </div>
+      <div class="container docs-content">
+        
+<h1 id="contents">Contents</h1>
+
+<div class="container">
+
+<h1 id="general">Changelog</h1>
+<!--updates list-->
+
+<h2>v2.5.2</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Transparent Header changes when saving page</li>
+  <li>Icon Select on backend builder</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>Gutenberg Compatibility</li>
+  <li>100+ Content Blocks for WPBakery Visual Composer</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Visual Composer Plugin</li>
+  <li>Codeless Builder</li>
+</ul>
+<br><br>
+
+<h2>v2.5.1</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Simple Masonery Blog</li>
+  <li>Portfolio Pagination</li>
+  <li>Scroll Story Demo</li>
+  <li>Social Icon Element</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>Folie Link Color</li>
+  <li>Target attr for Media Element Link</li>
+  <li>Target attr for Column </li>
+</ul>
+<br><br>
+
+<h2>v2.5</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Visual Composer issue (updated)</li>
+  <li>Header Builder bug Fixed</li>
+  <li>Left navigation ( logo and elements centered)</li>
+  <li>Animation Issue</li>
+  <li>Landing Page demo installation</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.6.1</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>Testimonial Auto Play option.</li>
+</ul>
+<br><br>
+
+<h2>v2.4</h2>
+<strong>Updated:</strong>
+<ul>
+  <li>Compatible with Gutenberg</li>
+  <li>Compatible with WordPress 5.0</li>
+  <li>Compatible with Latest WooCommerce</li>
+  <li>Compatible with PHP 7.2</li>
+</ul>
+<strong>Fixed:</strong>
+<ul>
+  <li>Kirki Plugin Issue</li>
+  <li>issue on IE 11</li>
+</ul>
+<br><br>
+
+<h2>v1.4.9</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Header Layout tools not working with latest kirki: kirki.util.validate.cssValue</li>
+  <li>Inconsistency with some elements on builder</li>
+  <li>Remove Header Builder tools when in Customizer Home Page as Blog</li>
+  <li>When adding Row -> Show Row Options immediately, not column options</li>
+  <li>Fullheight Slider Option not working (id replicated), fixed</li>
+  <li>Current Slide button fixed on center bottom</li>
+  <li>Position of page tools in builder</li>
+  <li>Social Icons Element Css Style Box</li>
+  <li>Better management of Portfolio Masonry ( automatic/manual )</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>5 New Demos: Portfolio Dark, Portfolio Product Designer, Portfolio Fullscreen carousel, Photography Masonry, Portfolio Metro</li>
+  <li>More options on Footer Styling</li>
+  <li>Blog Grid Wrapper Bg Color option added</li>       
+  <li>Sidebar Search BG Color</li>
+  <li>New offcanvas menu style (push container)</li>
+  <li>Footer Title Typography, Footer Content Typography Options</li>
+  <li>Better options for blog and single blog styling</li>
+  <li>Portfolio Animation Delay Option</li>
+  <li>Portfolio Reveal Effect</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Kirki new update. Media field doesn’t work</li>
+</ul>
+<br><br>
+
+<h2>v1.4.8</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Portfolio on hover for mobile now clickable after first touch.</li>
+  <li>Hamburger Menu Fullscreen Style on One Page, close overlay when changing menu item</li>
+  <li>Issue with Page Transition and sticky header, created with no reason an empty space on top</li>
+  <li>Update codeless_get_meta, important for users that accidentaly import several time same dummy data</li>
+  <li>Default BG color on customizer, now its empty</li>
+  <li>Service Element issue when service with custom image and circle wrapper</li>
+  <li>Service Title with several line issue</li>
+  <li>Media Element on position left</li>
+  <li>Small fixed on cl-service on various layouts</li>
+  <li>Small issue when options with same name (code issue)</li>
+  <li>Gallery Element item justify content center</li>
+  <li>Custom Heading on max-width 992</li>
+  <li>Small issue with Most Popular widget</li>
+  <li>Custom Code Element</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>Multiple Portfolio Elements into one page</li>
+  <li>Extend Inner Row/Columns with Animations and Responsive Options</li>
+  <li>Save Row/Column as Template and re-use directly without need to manual refresh page.</li>
+  <li>Option for Testimonial Carousel Columns</li>
+  <li>Responsive Options for Row & Columns</li>
+  <li>Options for changing order of header columns on Responsive</li>
+  <li>Widget Sidebar Element</li>
+  <li>Back-to-top button</li>
+  <li>Option to add portfolio item with video and lightbox</li>
+  <li>Target Option on Buttons</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.4.8</li>
+</ul>
+<br><br>
+
+<h2>v1.4.6</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Small issue with dummy data</li>
+  <li>Issue with installing demo data ( generated from version 2.1 )</li>
+  <li>Issue with autoplay option on Codeless Slider</li>
+  <li>Video Loop Option on Row</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.4.6</li>
+</ul>
+<br><br>
+
+<h2>v1.4.5</h2>
+<strong> Added:</strong>
+<ul>
+  <li> Megamenu boxed & fullwidth option and background image on megamenu option added</li>
+  <li>JPEG Quality option</li>
+  <li>Justify Gallery new Options: LastRow (justify, nojustify, hide)</li>
+  <li>Justify Gallery new Options: MaxRowHeight</li>
+  <li>Lightbox Caption for each image</li>
+  <li>Lightbox New skins: dark, light, parade, smooth, metro-black, metro-white and mac.</li>
+  <li>Lightbox Horizontal/Vertical Option</li>
+  <li>Lightbox Switch MouseWheels, Toolbar, Arrows, Slideshow, Fullscreen, Thumbnail, Swipe</li>
+</ul>
+<strong> Fixed:</strong>
+<ul>
+  <li>Megamenu Position</li>
+  <li>Scroll Story demo installing issue</li>
+  <li>Set Home page as "page on front" always, by slug, importer fixed</li>
+  <li>Header transparent issue when installing demo</li>
+  <li>Submenu on page transition issue</li>
+  <li>zoom-in, zoom-out effect</li>
+  <li>Portfolio Overlay icon when added on blog post.</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li> Codeless Builder 1.4.5</li>
+</ul>
+<br><br>
+
+<h2>v1.4.4</h2>
+<strong> Added:</strong>
+<ul>
+  <li>New Demo: Modern Business</li>
+  <li>Codeless Visual Composer Backend - now you can use the backend editor too.</li>
+  <li> Custom HTML code (can be used for google analytics)</li>
+  <li>Link option for team members</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.4.4 ( a better version )</li>
+  <li>WooCommerce</li>
+  <li>Codeless Builder</li>
+</ul>
+<strong> Fixed:</strong>
+<ul>
+  <li>Issue with social icons in header (control device visibility)</li>
+  <li>Portfolio Lightbox issue</li>
+  <li>Responsive Logo options</li>
+  <li>Favicon not showing</li>
+  <li>The Codeless Builder issue with Text</li>
+  <li>An issue with Softscale effect on Codeless Slider</li>
+</ul>
+<br><br>
+
+<h2>v1.2.2</h2>
+<strong>Fixed:</strong>
+  <ul>
+    <li>Codeless Builder with the WordPress 4.9</li>
+    <li>WordPress Customizer Colorpicker</li>
+  </ul>
+<strong>Updated:</strong>
+ <ul>
+  <li>Codeless Builder 1.2.2 (please update too)</li>
+  <li>Update Revolution Slider</li>
+</ul>
+<br><br>
+
+<h2>v1.2.1</h2>
+<strong>Fixed:</strong>
+  <ul>
+   <li>Codeless Slider Not showing Row options on Codeless Builder</li>
+   <li>Codeless Slider Softscale effect issues.</li>
+   <li>Lightbox issues (duplications)</li>
+ </ul>
+<strong>Updated:</strong>
+  <ul>
+  <li>Codeless Builder 1.2.1 (please update too)</li>
+</ul>
+<br><br>
+
+<h2>v1.2.0</h2>
+<strong>Fixed:</strong>
+  <ul>
+   <li>Problems with WordPress Multisite</li>
+ </ul>
+<strong>Updated:</strong>
+  <ul>
+   <li>Codeless Builder - new features, new UI and a better user experience.</li>
+ </ul>
+<br><br>
+
+<h2>v1.1.1</h2>
+<strong>Fixed:</strong>
+  <ul>
+   <li>Problems with the new update (Header Text Element)</li>
+ </ul>
+<br><br>
+
+<h2>v1.1.0</h2>
+<strong>IMPORTANT</strong>
+  <ul>
+   <li>PLEASE UPDATE THE CODELESS BUILDER TOO (new version 1.1.0)</li>
+ </ul>
+<strong>Added:</strong>
+  <ul>
+    <li>Tabs Element</li>
+    <li>Custom Link on Media Element</li>
+    <li>Custom Code / HTML Element</li>
+  </ul>
+<strong>Fixed:</strong>
+  <ul>
+    <li>Hover effect on social icons element</li>
+    <li>Custom Image on Service Element</li>
+    <li>Widget Image with Custom Size on Header</li>
+    <li>Revolution Slider issue on Codeless Builder</li>
+    <li>Toggles Title issue</li>
+    <li>WooCommerce Header Cart Color Contrast</li>
+  </ul>
+<strong>Updated:</strong>
+  <ul>
+    <li>Codeless Builder 1.1.0</li>
+  </ul>
+<br><br>
+
+<h2>v1.0.9</h2>
+<strong>Added:</strong>
+ <ul>
+  <li>New Demo: Shop Minimal, Shop Grid</li>
+  <li>Added Custom Link for Media Element</li>
+</ul>
+<strong>Fixed:</strong>
+ <ul>
+  <li> Fixed Icons Portfolio Option > Link & LightBox</li>
+</ul>
+<br><br>
+
+<h2>v1.0.8</h2>
+<strong>Added:</strong>
+  <ul>
+    <li>New Demo: Digital Agency (Business)</li>
+    <li>Effects on Service Element</li>
+    <li>Services Link</li>
+</ul>
+<strong>Fixed:</strong>
+  <ul>
+    <li>Sticky Header smooth on Header White without Header Transparent Actived</li>
+    <li>Footer Centered on Iphone</li>
+    <li>Google Plus Icon fixed on Social Element</li>
+  </ul>
+<strong>Updated:</strong>
+  <ul>
+    <li>Codeless Builder 1.0.8</li>
+    <li>Visual Composer 5.2</li>
+    <li>Woocommerce 3.1.0</li>
+  </ul>
+<br><br>
+
+<h2>v1.0.7</h2>
+<strong>Added:</strong>
+<ul>
+  <li>Clients Carousel autoplayTimeout</li>
+  <li>Option for light or dark filterson blog</li>
+</ul>
+<strong>Fixed:</strong>
+<ul>
+  <li>More detailed meta options for each page.</li>
+  <li>Folie Series link in Codeless Home.</li>
+  <li>Static Front Page and other options panel on Customizer fixed Padding</li>
+  <li>Slider Loop not Working animations fixed</li>
+  <li>Single Post Gallery Slider Layout</li>
+  <li>Single Author conflict with sidebar layout.</li>
+  <li>Show Filter on page for posts ( blog page )</li>
+  <li>Onepage with Multi-pages site, all menus with one color</li>
+  <li>Empty Portfolio Filters issue ( show all when no filters selected)</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.7</li>
+  <li>Visual Composer 5.2</li>
+  <li>Woocommerce 3.1.0</li>
+</ul>
+<br><br>
+
+<h2>v1.0.6</h2>
+<strong>Added:</strong>
+<ul>
+  <li>Empty Page - Large ADD (plus) button</li>
+  <li>All Options with slider, value can be set with input edit too.</li>
+</ul>
+<strong>Fixed:</strong>
+<ul>
+  <li>Footer Reveal Option conflict with Codeless Slider</li>
+  <li>Blog Read More Button - Live Style</li>
+  <li>Google Map live add & update</li>
+  <li>Single Portfolio Navigation z-index issue</li>
+  <li>Sticky when fullscreen overlay menu open issue</li>
+  <li>Filters, show only selected categories.</li>
+  <li>Media Element Alignment issues on Internet Explorer</li>
+  <li>HTML attr srcset issue caused by empty width</li>
+  <li>Two logo on header issue</li>
+  <li>One Page sticky offset added</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.6</li>
+</ul>
+<br><br>
+
+<h2>v1.0.5</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Automatic Updates now ready with Envato Market</li>
+  <li>Issues with Portfolio Builder on Codeless Builder</li>
+  <li>Studio Demo Content Missing</li>
+  <li>Change Logo Text live</li>
+  <li>Alignment of Post Metas on single posts with Modern Page Header in Responsive</li>
+  <li>Portfolio Links on Portfolio Overlay Style issue</li>
+  <li>Issue on Portfolio Categories Select Field</li>
+  <li>Page Header Typography Option, now can select various Heading Tags.</li>
+</ul>
+<strong>Added:</strong>
+<ul>
+  <li>New Demo: Landing Classic</li>
+  <li>New Demo: Scroll Story</li>
+  <li>Animation to Slides not only Row</li>
+  <li>New Feature: Slider Cinemagraphs Effect</li>
+  <li>Option for Vertical Slider. Now can be Plain or as Slider in Responsive</li>
+  <li>Slider Scroll Bottom SVG</li>
+  <li>New Header Element: Widget</li>
+  <li>New Feature: Create Custom Sidebars for pages, categories.</li>
+  <li>New Option: Blog Archive Layout. Custom Layout for archives</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.5</li>
+</ul>
+<br><br>
+
+<h2>v1.0.4</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Minor Bug Fixes with some PHP versions.</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.4</li>
+</ul>
+<br><br>
+
+<h2>v1.0.3</h2>
+<strong>Added:</strong>
+<ul>
+  <li>Searchable select fields on Codeless Builder</li>
+  <li>Column - Border Rounded Option</li>
+</ul>
+<strong>Fixed:</strong>
+<ul>
+  <li>Fixed wp_additional_image_sizes error for WP versions < 4.7</li>
+  <li>All issues with PHP 7.0 and other PHP versions.</li>
+  <li>Undefined variable on cl_row.php on WP_DEBUG on</li>
+  <li>Error codeless_get_terms when disactivate theme (with Codeless Builder active)</li>
+  <li>Align Comments with page layout on pages with comments.</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.3</li>
+</ul>
+
+<br><br>
+<h2>v1.0.2</h2>
+<strong>Added:</strong>
+<ul>
+  <li>New Demo Conference - Event</li>
+  <li>Countdown Element</li>
+</ul>
+<strong>Fixed:</strong>
+<ul>
+  <li>Child Theme Problem with menu and logo</li>
+  <li>Register Product on Welcome Window</li>
+</ul>
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.2</li>
+</ul>
+<br><br>
+
+<h2>v1.0.1</h2>
+<strong>Fixed:</strong>
+<ul>
+  <li>Added all missing dummy content</li>
+</ul>
+
+<strong>Updated:</strong>
+<ul>
+  <li>Codeless Builder 1.0.1</li>
+</ul>
+     
+<!--end updates list-->
+      <a class="docs-top" style="display: none" href="#">Back to top</a>
+    </div>
+    
+</div>
+  </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>
+
